@@ -1,9 +1,11 @@
 body {
   font-family: Arial, sans-serif;
+  /* Fuente base del sitio: Arial, con respaldo sans-serif */
   margin: 0;
   padding: 0;
+  /* Elimina márgenes y relleno por defecto del body */
   background: linear-gradient(150deg, #ff0000, #63022a);
-
+  /* Fondo con degradado en diagonal de rojo a burdeos */
 }
 
 header {
@@ -11,10 +13,12 @@ header {
   color: white;
   text-align: center;
   padding: 2rem;
+  /* Encabezado con fondo oscuro, texto blanco, centrado y con padding amplio */
 }
 
 .proyectos {
   padding: 2rem;
+  /* Espaciado interno para la sección de proyectos */
 }
 
 .proyecto {
@@ -23,12 +27,14 @@ header {
   margin-bottom: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  /* Cada tarjeta de proyecto tiene fondo blanco, bordes redondeados y sombra ligera */
 }
 
 .proyecto img {
   width: 100%;
   max-width: 400px;
   border-radius: 4px;
+  /* Las imágenes ocupan el ancho disponible (hasta 400px) y tienen bordes suavizados */
 }
 
 .proyecto a {
@@ -36,6 +42,7 @@ header {
   margin-top: 0.5rem;
   color: #0066cc;
   text-decoration: none;
+  /* Estilo del enlace para ver el proyecto: color azul y sin subrayado */
 }
 
 footer {
@@ -43,4 +50,5 @@ footer {
   padding: 1rem;
   background: #333;
   color: aliceblue;
+  /* Pie de página con fondo oscuro, texto claro y centrado */
 }
