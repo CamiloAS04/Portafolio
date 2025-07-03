@@ -1,110 +1,411 @@
 <!DOCTYPE html>
-<!-- Define que el documento es HTML5 -->
-<html lang="en">
-<!-- Idioma principal del documento: inglés (puedes cambiarlo a "es" si prefieres español) -->
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <!-- Codificación de caracteres en UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Hace que el sitio sea responsive en dispositivos móviles -->
-    <title>Portafolio</title>
-    <!-- Título de la pestaña del navegador -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Enlace a tu hoja de estilos externa -->
 </head>
+
 <body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Camilo</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
 
-    <header>
-        <!-- Encabezado del sitio, contiene nombre y descripción -->
-        <h1>Juan Camilo Alvarez</h1>
-        <p>Desarrollador Software</p>
-    </header>
-
-    <section class="proyectos">
-        <!-- Sección donde se listan los proyectos -->
-        <h2>Proyectos</h2>
-
-        <div class="proyecto">
-            <!-- Contenedor individual de un proyecto -->
-            <img src="img/Login.png" alt="proyecto 1">
-            <!-- Imagen del proyecto (debe estar en la carpeta img) -->
-            <h3>Página para iniciar sesión</h3>
-            <!-- Título del proyecto -->
-            <p>Una página para iniciar sesión o registrarse con temática de Blue Lock</p>
-            <!-- Descripción del proyecto -->
-            <a href="https://camiloas04.github.io/Login/" target="_blank">Ver en GitHub</a>
-            <!-- Enlace al proyecto en GitHub Pages, se abre en una nueva pestaña -->
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/hero.jpg" alt="">
+            </div>
+            <h1>Camilo Alvarez</h1>
+            <h2>Desarrollador Software - Principiante</h2>
+            <div class="redes">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-solid fa-rss"></i></a>
+            </div>
         </div>
-
-         <div class="proyecto">
-            <!-- Contenedor individual de un proyecto -->
-            <img src="img/Sitio-Semantico.png" alt="proyecto 2">
-            <!-- Imagen del proyecto (debe estar en la carpeta img) -->
-            <h3>Página Semantica</h3>
-            <!-- Título del proyecto -->
-            <p>Una Pagina donde ver productos y una breve descripcion de etiquetas semanticas</p>
-            <!-- Descripción del proyecto -->
-            <a href="https://camiloas04.github.io/Pagina-Semantica/" target="_blank">Ver en GitHub</a>
-            <!-- Enlace al proyecto en GitHub Pages, se abre en una nueva pestaña -->
-        </div>
-
-        <div class="proyecto">
-            <!-- Contenedor individual de un proyecto -->
-            <img src="img/WebMusical.png" alt="proyecto 2">
-            <!-- Imagen del proyecto (debe estar en la carpeta img) -->
-            <h3>Página Musical</h3>
-            <!-- Título del proyecto -->
-            <p>Una Pagina musical donde se ven dos album musicales de dos artistas diferentes</p>
-            <!-- Descripción del proyecto -->
-            <a href="https://camiloas04.github.io/Pagina-Musical/" target="_blank">Ver en GitHub</a>
-            <!-- Enlace al proyecto en GitHub Pages, se abre en una nueva pestaña -->
-        </div>
-
-        <div class="proyecto">
-            <!-- Contenedor individual de un proyecto -->
-            <img src="img/Restaurante.jpg" alt="proyecto 2">
-            <!-- Imagen del proyecto (debe estar en la carpeta img) -->
-            <h3>Página Menu Restaurante</h3>
-            <!-- Título del proyecto -->
-            <p>Una Pagina donde puedes ver el menu de un restaurante de comida japonesa</p>
-            <!-- Descripción del proyecto -->
-            <a href="https://camiloas04.github.io/Restaurante/" target="_blank">Ver en GitHub</a>
-            <!-- Enlace al proyecto en GitHub Pages, se abre en una nueva pestaña -->
-        </div>
-
-        <div class="proyecto">
-            <!-- Contenedor individual de un proyecto -->
-            <img src="img/Evento.png" alt="proyecto 2">
-            <!-- Imagen del proyecto (debe estar en la carpeta img) -->
-            <h3>Pagina Evento</h3>
-            <!-- Título del proyecto -->
-            <p>Una pagina para registrarse en un evento</p>
-            <!-- Descripción del proyecto -->
-            <a href="https://camiloas04.github.io/Pagina-Evento/" target="_blank">Ver en GitHub</a>
-            <!-- Enlace al proyecto en GitHub Pages, se abre en una nueva pestaña -->
-        </div>
-
-        <div class="proyecto">
-            <!-- Contenedor individual de un proyecto -->
-            <img src="img/Feria.png" alt="proyecto 2">
-            <!-- Imagen del proyecto (debe estar en la carpeta img) -->
-            <h3>Feria de barrio</h3>
-            <!-- Título del proyecto -->
-            <p>Una pagina informarce sobre una feria de barrio junto a sus productos y menus</p>
-            <!-- Descripción del proyecto -->
-            <a href="https://camiloas04.github.io/Feria-Barrio/" target="_blank">Ver en GitHub</a>
-            <!-- Enlace al proyecto en GitHub Pages, se abre en una nueva pestaña -->
-        </div>
-
-        <!-- Aquí se agregará más tarde más proyectos -->
-        <!-- Comentario para indicar futuras adiciones -->
-
     </section>
 
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Juan Camilo Alvarez.</span> LLevo poco tiempo aprendiendo desarrollo Software en RiWi,
+                espero algun dia llegar a un nivel muy alto y poder vivir de lo que me encanta</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            04-04-2003
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            310 7637748
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            camiloalvarezsan04@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            En proceso
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Calle 97aa #80-22
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>Coder</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-paw"></i>
+                            <span>ANIMALES</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-futbol"></i>
+                            <span>FUTBOL</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-tv"></i>
+                            <span>SERIES</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>AUTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button>
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>30%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>30%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Photoshop</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>10%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proximo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proximo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proyect Management</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>30%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Colegio</h4>
+                        <span class="casa">Institucion Educativa Doce De Octubre</span>
+                        <span class="fecha">2014 - 2019</span>
+                        <p>Colegio ubicado en el barrio doce de octubre</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>En espera</h4>
+                        <span class="casa">En espera</span>
+                        <span class="fecha">0000 - 0000</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, ad</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+
+            <div class="galeria">
+
+                <div class="proyecto">
+                    <a href="https://camiloas04.github.io/Login/" target="_blank">
+                        <img src="img/p1.png" alt="">
+                        <div class="overlay">
+                        <h3>Login</h3>
+                        <p>HTML Y CSS</p>
+                        </div>
+                    </a>
+                </div>
+
+                 <div class="proyecto">
+                    <a href="https://camiloas04.github.io/Pagina-Semantica/" target="_blank">
+                        <img src="img/p2.png" alt="">
+                        <div class="overlay">
+                        <h3>Pagina Semantica</h3>
+                        <p>HTML Y CSS</p>
+                        </div>
+                    </a>
+                </div>
+
+               <div class="proyecto">
+                    <a href="https://camiloas04.github.io/Pagina-Musical/" target="_blank">
+                        <img src="img/p3.png" alt="">
+                        <div class="overlay">
+                        <h3>Pagina Musical</h3>
+                        <p>HTML Y CSS</p>
+                        </div>
+                    </a>
+                </div>
+
+               <div class="proyecto">
+                    <a href="https://camiloas04.github.io/Restaurante/" target="_blank">
+                        <img src="img/p4.jpg" alt="">
+                        <div class="overlay">
+                        <h3>Restaurante</h3>
+                        <p>HTML Y CSS</p>
+                        </div>
+                    </a>
+                </div>
+                
+               <div class="proyecto">
+                    <a href="https://camiloas04.github.io/Pagina-Evento/" target="_blank">
+                        <img src="img/p5.png" alt="">
+                        <div class="overlay">
+                        <h3>Pagina Evento</h3>
+                        <p>HTML Y CSS</p>
+                        </div>
+                    </a>
+                </div>
+
+               <div class="proyecto">
+                    <a href="https://camiloas04.github.io/Feria-Barrio/" target="_blank">
+                        <img src="img/p6.png" alt="">
+                        <div class="overlay">
+                        <h3>Feria Barrio</h3>
+                        <p>HTML Y CSS</p>
+                        </div>
+                    </a>
+                </div>
+
+                 <div class="proyecto">
+                    <a href="https://miguela207.github.io/GameDOM/" target="_blank">
+                        <img src="img/P7.png" alt="">
+                        <div class="overlay">
+                        <h3>Juego CRUDY</h3>
+                        <p>HTML,CSS Y JAVASCRIPT</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Calle 97aa #80-22, Medellín, Colombia
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llamanos: 310 7637748
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: camiloalvarezsan04@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
     <footer>
-        <!-- Pie de página con información de contacto -->
-        <p>Contacto: camiloalvarezsan04@gmail.com</p>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-rss"></i></a>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
+
 </html>
